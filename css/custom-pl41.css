@@ -1,0 +1,86 @@
+/* --- HEADER SECTION */
+.pl_logo-link img {
+  height: 80px;
+  width: auto !important;
+  margin-right: 6px;
+}
+
+@media (max-width: 991px) {
+  .pl_logo-link img {
+    height: 50px;
+  }
+}
+
+.slicknav_btn {
+  top: -38px;
+}
+
+
+/* --- CTA SECTION */
+.slider_area .single_slider .slider_text h1 {
+  color: #fff;
+  font-family: "Yeseva One", cursive;
+  font-size: 55px;
+  margin-top: 6px;
+  margin-bottom: 9px;
+  line-height: 1.14;
+  text-shadow: 2px 2px rgba(0, 0, 0, .25);
+}
+
+.slider_area .single_slider .slider_text p {
+  text-shadow: 2px 2px rgba(0, 0, 0, .25);
+}
+
+@media (max-width: 767px) {
+  .slider_area .single_slider {
+    height: 600px;
+  }
+
+  .slider_area .single_slider .slider_text h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .slider_area .single_slider .slider_text h1 {
+    font-size: 35px;
+  }
+}
+
+.slider_bg_1 {
+  background-image: url(../img/pl/florecer-centro.jpg);
+  background-position: center center !important;
+}
+
+
+/* --- REUSABLE */
+.pl_flex-align-vertical {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pl_flex-align-vertical > * {
+  width: 100%;
+}
+
+.single_reson {
+  margin-bottom: 32px;
+}
+
+.single_reson .thum img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media (max-width: 767px) {
+  .single_reson .thum img {
+    height: 300px;
+  }
+}
