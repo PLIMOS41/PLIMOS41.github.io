@@ -26,6 +26,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom-pl41.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+
+    <script>
+        function scrollToElement(elementId) {
+            document.querySelector('#' + elementId + ' .scroll-target').scrollIntoView({behavior:"smooth"});
+        }
+    </script>
 </head>
 
 <body>
@@ -86,11 +92,11 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="#">Florecer</a></li>
-                                        <li><a href="#">Proyectos</a></li>
-                                        <li><a href="#">Ayudar</a></li>
-                                        <li><a href="#">Rifas</a></li>
-                                        <li><a href="#">Nosotros</a></li>
+                                        <li><a href="#" data-scroll-nav='1' onclick="scrollToElement('florecer')">Florecer</a></li>
+                                        <li><a href="#" data-scroll-nav='1' onclick="scrollToElement('proyectos')">Proyectos</a></li>
+                                        <li><a href="#" data-scroll-nav='1' onclick="scrollToElement('donaciones')">Ayudar</a></li>
+                                        <li><a href="#" data-scroll-nav='1' onclick="scrollToElement('rifas')">Rifas</a></li>
+                                        <li><a href="#" data-scroll-nav='1' onclick="scrollToElement('nosotros')">Nosotros</a></li>
                                         <!-- <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="blog.html">blog</a></li>
@@ -108,7 +114,7 @@
                                 </nav>
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
-                                        <a data-scroll-nav='1' href="#">Donar</a>
+                                        <a data-scroll-nav='1' href="#" onclick="scrollToElement('donaciones')">Donar</a>
                                     </div>
                                 </div>
                             </div>
@@ -133,7 +139,7 @@
                             <!-- <span>Get Started Today.</span> -->
                             <h1 class="pl_main-title">Ayudanos a traer luz y alegría a los niños de la Asociación Civil Florecer en Jose C Paz</h1>
                             <p>Puedes ayudar con diferentes tipos de donaciones (dinero u otros bienes que requerimos), participando en las rifas, y más. Estamos comprometidos con mejorar la calidad de vida de todos los chicos asistidos por Florecer.</p>
-                            <a href="About.html" class="boxed-btn3">Quiero Ayudar</a>
+                            <a data-scroll-nav='1' href="#" class="boxed-btn3" onclick="scrollToElement('donaciones')">Quiero Ayudar</a>
                         </div>
                     </div>
                 </div>
@@ -142,13 +148,24 @@
     </div>
     <!-- slider_area_end -->
 
-    <section class="sample-text-area" id="section-florecer">
+    <section class="sample-text-area scroll-target-parent" id="florecer">
+        <div class="scroll-target"></div>
 		<div class="container box_1170">
 			<div class="section_title text-center mb-55">
                 <h3><span>Asociación Civil Florecer</span></h3>
             </div>
-			<p class="sample-text" style="color: red;">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			<p class="sample-text text-align-justify">
+                Florecer tiene como objeto la asistencia social, favoreciendo especialmente a los niños y adolescentes, en un sector poblacional donde nuestra niñez está más desposeída para llevar un hálito de esperanza a muchos de ellos.
+			</p>
+            <br />
+
+            <p class="sample-text text-align-justify">
+                Cuentan con dos espacios físicos: El Centro Comunitario San Francisco de Asís ubicado en calle Suecia Nº 4400 barrio Sol y Verde, José C Paz, y el Polideportivo “Todos Juntos”, una propuesta para los adolescentes y jóvenes del barrio.
+			</p>
+            <br />
+
+            <p class="sample-text text-align-justify">
+                Entre las actividades que realizan se destacan: El apoyo escolar brindado por docentes ad honorem, con clases de idioma inglés; la práctica de computación en una sala preparada para tal fin; un taller de costura que generosamente brindan colaboradoras de la Asociación para que las mamás aprendan a coser y una huerta en la cual las personas del lugar se pueden llevar lo que siembran y cosechan. En el polideportivo se brindan desayuno y merienda como refuerzo alimentario en favor de los niños, además de actividades recreativas.
 			</p>
 
             <h5 class="text-heading" style="margin-top: 32px;">Datos</h5>
@@ -161,7 +178,8 @@
 		</div>
 	</section>
 
-    <section class="sample-text-area" style="background: rgba(60, 199, 143, 0.06);">
+    <section class="sample-text-area scroll-target-parent" style="background: rgba(60, 199, 143, 0.06);" id="proyectos">
+        <div class="scroll-target"></div>
 		<div class="container box_1170">
 			<div class="section_title text-center mb-55">
                 <h3><span>Nuestro Compromiso</span></h3>
@@ -172,17 +190,21 @@
 			</p>
 
             <ul class="unordered-list" style="margin-top: 32px;">
-                <li>Construcción de dos baños nuevos en la sede Polideportivo, uno de ellos para discapacitados.</li>
-                <li>Construir un paredón de 23m de ancho por 2.5m de alto en la sede “Centro”.</li>
-                <li>Renovación del Laboratorio de Computación hasta tener 15 computadoras funcionales.</li>
-                <li>Reacondicionamiento de la Ludoteca.</li>
-                <li>Instalación de 8 cámaras de seguridad en la sede “Centro”.</li>
-                <li>Instalación de rejas para ventanas en el Polideportivo.</li>
-                <li>Mejoras a la sala de costura.</li>
-                <li>Reparación del techo del SUM en el Polideportivo.</li>
-                <li style="color: red;">[AGREGAR LAS QUE FALTEN]</li>
-                <li style="color: red;">[AGREGAR LAS QUE FALTEN]</li>
-                <li style="color: red;">[AGREGAR LAS QUE FALTEN]</li>
+                <li>Construir una pared medianera lindante de 23m de ancho por 2.5m de alto en la sede “Centro”.</li>
+                <li>Construir dos baños nuevos en la sede Polideportivo, uno de ellos para discapacitados.</li>
+                <li>Diseñar plano para el Polideportivo con todas las futuras áreas y secciones.</li>
+                <li>Renovar del Laboratorio de Computación hasta tener 15 computadoras funcionales conectadas a internet.</li>
+                <li>Reacondicionar la Ludoteca.</li>
+                <li>Instalar 8 cámaras de seguridad en la sede “Centro”.</li>
+                <li>Instalar rejas para ventanas en el Polideportivo.</li>
+                <li>Equipar la sala de costura con perchero y armario para telas.</li>
+                <li>Reparar del techo del SUM en el Polideportivo.</li>
+                <li>Instalar puerta corrediza separadora entre ludoteca y el aula lindante.</li>
+                <li>Pintar interiores y exteriores en ambas sedes.</li>
+                <li>Equipar el Polideportivo con elementos deportivos.</li>
+                <li>Instalar dos ventiladores en el SUM.</li>
+                <li>Mejorar la señalética y cartelería de ambas sedes.</li>
+                <li>Reparar Heladera de la cocina.</li>
             </ul>
 
             <br />
@@ -192,24 +214,36 @@
 		</div>
 	</section>
 
-    <section class="sample-text-area reson_area">
+    <section class="sample-text-area reson_area scroll-target-parent" id="donaciones">
+        <div class="scroll-target"></div>
 		<div class="container box_1170">
 			<div class="section_title text-center mb-55">
                 <h3><span>Cómo Ayudar</span></h3>
             </div>
 
             <p class="sample-text">Puedes ayudar con diferentes tipos de donaciones (dinero u otros bienes que requerimos), participando en las rifas, y más.</p>
+            <br />
 
-            <p class="sample-text" style="color: red;">[LINK A MERCADO PAGO]</p>
+            <h5 class="text-heading" style="margin-bottom: 10px;">MercadoPago</h5>
 
-            <p class="sample-text" style="color: red;">[LINK A CAFECITO]</p>
+            <p>Puedes transferir el monto que desees mediante MercadoPago:</p>
+            <p>
+                Maria Florencia Cadierno<br />
+                CVU: 0000003100044350524742<br />
+                Alias: pato.apaga.agita.mp<br />
+                CUIT/CUIL: 27264708473
+            </p>
+            <br />
+
+            <h5 class="text-heading" style="margin-bottom: 10px;">Comprando un Cafecito</h5>
+            <p>Puedes hacer una donación en <a href="https://cafecito.app/somospl41" target="_blank">cafecito.app/somospl41</a>.</p>
 
 
 
-            <h5 class="text-heading" style="margin-top: 32px;">Donaciones</h5>
+            <h5 class="text-heading" style="margin-top: 32px;">Donando</h5>
 
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
+                <!-- <div class="col-lg-4 col-md-6">
                     <div class="single_reson">
                         <div class="thum">
                             <div class="thum_1">
@@ -246,26 +280,25 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-lg-4 col-md-6">
                     <div class="single_reson">
                         <div class="thum">
                             <div class="thum_1">
-                                <img src="img/pl/donacion-juguetes.jpg" alt="">
+                                <img src="img/pl/donacion-pc.jpg" alt="">
                             </div>
                         </div>
                         <div class="help_content">
-                            <h4>Juguetes</h4>
-                            <p style="color: red;">
-                                Lorem ipsum, or lipsum as it is 
-                                sometimes known, is dummy 
-                                text used in laying out print.
-                                <br />
-                                <b>[PERSONA / CONTACTO]</b>
+                            <h4>Equipos de Computación</h4>
+                            <p>
+                                Computadoras, componentes, monitores, sillas de escritorio, periféricos. Todo suma para el Laboratorio.
+                                <br /><br />
+                                <span style="font-weight: bold;">Contactar con Felix Lucas, <a href="https://wa.me/5491122510001" target="_blank">WhatsApp</a></span>
                             </p>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-lg-4 col-md-6">
                     <div class="single_reson">
                         <div class="thum">
@@ -275,21 +308,37 @@
                         </div>
                         <div class="help_content">
                             <h4>Libros Infantiles</h4>
-                            <p style="color: red;">
-                                Lorem ipsum, or lipsum as it is 
-                                sometimes known, is dummy 
-                                text used in laying out print.
-                                <br />
-                                <b>[PERSONA / CONTACTO]</b>
+                            <p>
+                                Libros infanto juveniles para armar biblioteca, de 0-14 años.
+                                Literatura clásica, universal, cuentos, comics, fábulas, etc.
+                                ¡Fomentando la lectura como viaje imaginario a mundos inesperados!
+                                <br /><br />
+                                <span style="font-weight: bold;">Contactar con Miriam Parcero, <a href="https://wa.me/5491162382745" target="_blank">WhatsApp</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_reson">
+                        <div class="thum">
+                            <div class="thum_1">
+                                <img src="img/pl/donacion-juguetes.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="help_content">
+                            <h4>Juguetes</h4>
+                            <p>
+                                Juguetes y juegos de mesa, nuevos o usados en buen estado.
+                                <br /><br />
+                                <b><a href="mailto:acflorecerimos@gmail.com"><i class="fa fa-envelope"></i> acflorecerimos@gmail.com</a></b>
                             </p>
                         </div>
                     </div>
                 </div>
 
 
-
-
-                <div class="col-lg-4 col-md-6">
+                <!-- <div class="col-lg-4 col-md-6">
                     <div class="single_reson">
                         <div class="thum">
                             <div class="thum_1">
@@ -326,12 +375,13 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 		</div>
 	</section>
 
-    <section class="sample-text-area" style="background: rgba(60, 199, 143, 0.06);">
+    <section class="sample-text-area scroll-target-parent" style="background: rgba(60, 199, 143, 0.06);" id="rifas">
+        <div class="scroll-target"></div>
 		<div class="container box_1170">
 			<div class="section_title text-center mb-55">
                 <h3><span>Rifas</span></h3>
@@ -345,7 +395,8 @@
 		</div>
 	</section>
 
-    <section class="sample-text-area">
+    <section class="sample-text-area scroll-target-parent" id="nosotros">
+        <div class="scroll-target"></div>
 		<div class="container box_1170">
 			<div class="section_title text-center mb-55">
                 <h3><span>Quienes Somos</span></h3>
@@ -357,9 +408,7 @@
                 </div>
                 <div class="col-md-6 mt-sm-20">
                     <div class="pl_flex-align-vertical">
-                        <p style="text-align: center;">Somos PL IMOS 41. Una tribu amorosa, comprometida, dadora, confrontativa, honesta y valiente que se compromete a dejar un legado en los niños a través de la Asociación Civil Florecer.</p>
-
-                        <p style="text-align: center; color: red;">[¿EXTENDERNOS EN QUIENES SOMOS?]</p>
+                        <p style="text-align: center;"><span style="font-weight: bold;">¡Somos PL IMOS 41!</span> Una tribu amorosa, comprometida, dadora, confrontativa, honesta y valiente que se compromete a dejar un legado en los niños a través de la Asociación Civil Florecer.</p>
                     </div>
                 </div>
             </div>
